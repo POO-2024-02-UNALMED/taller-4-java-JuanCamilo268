@@ -30,7 +30,7 @@ public class Persona {
     }
 
     public Persona(String nombre) {
-        this.nombre = "";
+        this.nombre = nombre; ///Lo cambio para utilizar el parámetro del constructor
         cedula = 1; /// Agredado porque si un atributo es constante teiene que inicializarse
         totalPersonas++;
     }
