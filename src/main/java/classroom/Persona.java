@@ -8,7 +8,7 @@ public class Persona {
     
     static {
         totalPersonas = 0;
-        cedula = 3;
+       ///cedula = 3; //lo quito porque cedula es atributo de instancia y no se puede editar sin un objeto creado
     }
 
     public Persona(long cedula, String nombre) {
@@ -31,8 +31,14 @@ public class Persona {
 
     public Persona(String nombre) {
         this.nombre = "";
+        cedula = 1; /// Agredado porque si un atributo es constante teiene que inicializarse
         totalPersonas++;
     }
+
+    public Persona() {
+        cedula = 0;
+        totalPersonas++;
+    } ///Creado para crear nuevos objetos sin necesidad de argumentos
     
     public long getCedula() {
         return cedula;
